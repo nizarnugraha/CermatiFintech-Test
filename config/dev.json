@@ -1,0 +1,18 @@
+{
+  "default_type": "guest",
+  "host_cermati": "https://www.cermati.com/gabung",
+  "types": {
+    "guest": {
+      "default_merchant": "guest"
+    },
+    "owner": {
+      "default_merchant": "owner",
+      "merchants": [
+        {
+          "email": "nizarnugraha9@yopmail.com",
+          "password": "nizar123"
+        }
+      ]
+    }
+  }
+}
