@@ -41,7 +41,7 @@ configuration setup is on the folder `config/` this configuration filename is ba
 #### Add `host` url into for new configuration
 1. check on file configuration `.json` file, 
 ```
-"host_varcel": "https://demo.vercel.store/",
+"host_varcel": "https://www.cermati.com/gabung",
 "host_custom:" "xxxxx" // add new host configuration on below this section
 ```
 
@@ -49,7 +49,7 @@ configuration setup is on the folder `config/` this configuration filename is ba
 look up to line 26
 ```
  // SETUP CONFIGURATION FOR HOST
-  process.env.HOST_VARCEL = config.host_varcel;
+  process.env.HOST_CERMATI = config.host_cermati;
 ```
 
 
@@ -57,21 +57,11 @@ look up to line 26
 #### Running all testcase
 * `./run.sh`
 
-#### Running testcase with specific module
-* `MODULE_PROJECT=module1,module2 ./run.sh`
-
 #### Running testcase with specific test file
-* `TEST_FILE_PATH=/*_test.js,/*_test.js ./run.sh`
+* `TEST_FILE_PATH=RegisterTest/register_test.js ./run.sh`
 
 #### Running testcase with specific test file and environment
 * `ENVIRONMENT=local TEST_FILE_PATH=/*_test.js ./run.sh`
-
-### Environment Variable
-|Name|Description|Default|
-|---|---|---|
-|ENVIRONMENT|Define your setup environment *example: local, dev, etc*, if you're own laptop set environment to `local`|local|
-|MODULE_PROJECT|If you want to running on specific module, set e the value of the module with `,` as separator *example:product,checkout*|All module testcase|
-|TEST_FILE_PATH|specific file test to running|*TEST_FILE_PATH=login/login_local_test.js*|
 
 
 
