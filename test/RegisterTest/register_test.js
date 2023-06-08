@@ -1,6 +1,4 @@
-// const productJaketURL = 'https://demo.vercel.store/product/lightweight-jacket';
-// const checkoutURL = 'https://acmedemo.mybigcommerce.com/checkout';
-// const orderConfirmationURL = 'https://acmedemo.mybigcommerce.com/checkout/order-confirmation';
+
 
 Feature('Register Account')
 
@@ -30,11 +28,12 @@ Scenario('Validate Error message empty phone number', ({I, registerPage}) => {
   registerPage.filledCountry("KOTA JAKARTA SELATAN");
   I.pressKey('Enter');
   I.wait(3);
-  I.click(registerPage.button.buttonRegister);
+  registerPage.clickButton();
   I.wait(3);
   I.scrollTo(registerPage.field.fieldEmail);
   I.wait(3);
   I.seeElement(registerPage.text.errorTextEmailRequiered);
+  I.wait(5);
 });
 
 // Scenario('Validate Error message empty password', ({I, registerPage}) => {

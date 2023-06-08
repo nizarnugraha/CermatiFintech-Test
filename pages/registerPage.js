@@ -11,7 +11,7 @@ module.exports= {
         fieldCity :{xpath:'//input[contains(@id,"cityAndProvince")]'}
     },
     button: {
-        buttonRegister :{xpath:'//button[@data-button-name="register-new"]'}
+        buttonRegister :{xpath:'//*[@id="safe-area"]/div/div[2]/div/button'}
         },
     text: {
         errorTextEmailRequiered: { xpath:'(//div[@class="m-t-4 error_rz3sn"][contains(.,"Input wajib diisi")])[2]'}
@@ -47,10 +47,15 @@ module.exports= {
     filledCountry(city){
         I.fillField(this.field.fieldCity, city);
         I.wait(5);
-    }
+    },
     // nullFill(){
         // var message = "Input wajib diisi";
         // I.see(message, this.text.errorTextEmailRequiered);
     // }
+    clickButton(){
+        I.seeElement(this.button.buttonRegister);
+        I.click(this.button.buttonRegister);
+        I.wait(3);
+    }
 
 }
